@@ -1,6 +1,6 @@
 # ng-sidebar-layout
 
-This project shows the user of Angular directives with Bootstrap to create a mobile compatible sliding sidebar layout.
+This project shows the use of Angular directives with Bootstrap to create a mobile compatible sliding sidebar layout.
 
 The menu slides out from the left on mobile and sticks to the left on large than mobile.
 
