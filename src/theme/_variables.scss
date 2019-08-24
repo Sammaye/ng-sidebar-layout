@@ -1,0 +1,53 @@
+// Core Admin Variables
+$enable-sidebar-nav-rounded: true;
+$layout-transition-speed: .25s;
+$spacer: 1rem !default;
+$spacer-x: $spacer !default;
+
+// Navbar
+$navbar-height: 59px;
+
+// Sidebar
+$sidebar-width: 240px;
+$mobile-sidebar-width: 240px;
+$sidebar-padding: 16px 0 0 $spacer-x;
+$sidebar-minimized-width: 50px;
+$sidebar-minimized-height: $sidebar-minimized-width;
+$sidebar-compact-width: 55px;
+$sidebar-compact-height: $sidebar-compact-width;
+$sidebar-color: color("gray-dark");
+$sidebar-bg: $body-bg;
+$sidebar-header-bg: rgba(0, 0, 0, .2);
+$sidebar-footer-bg: rgba(0, 0, 0, .2);
+$sidebar-borders: none;
+$sidebar-nav-color: color("gray-dark");
+
+$sidebar-nav-title-padding-y: .95rem;
+$sidebar-nav-title-padding-x: 1rem;
+$sidebar-nav-title-color: $text-muted;
+
+$sidebar-nav-link-padding-y: .75rem;
+$sidebar-nav-link-padding-x: 1rem;
+$sidebar-nav-link-color: color("gray-dark");
+$sidebar-nav-link-bg: transparent;
+$sidebar-nav-link-icon-color: color("gray-dark");
+$sidebar-nav-link-borders: 0;
+
+$sidebar-nav-link-hover-color: #000;
+$sidebar-nav-link-hover-bg: color("gray-lighter");
+$sidebar-nav-link-hover-icon-color: #000;
+$sidebar-nav-link-hover-borders: 0;
+
+$sidebar-nav-link-active-color: #fff !important;
+$sidebar-nav-link-active-bg: theme-color("primary");
+$sidebar-nav-link-active-icon-color: #fff !important;
+$sidebar-nav-link-active-borders: 0;
+
+$sidebar-nav-dropdown-color: #fff;
+$sidebar-nav-dropdown-bg: lighten(theme-color("primary"), 10%);
+$sidebar-nav-dropdown-icon-color: #fff !important;
+$sidebar-nav-dropdown-borders: 0;
+
+
+
+

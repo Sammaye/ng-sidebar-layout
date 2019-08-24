@@ -1,0 +1,76 @@
+<nav class="navbar fixed-top navbar-expand navbar-light bg-white">
+  <button class="navbar-toggler d-block mr-2" type="button" appSidebarToggler appMobileSidebarToggler>&#9776;</button>
+  <a class="navbar-brand" href="#"><img src="assets/logo.png" height="30"/></a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item d-none d-sm-block">
+        <span class="navbar-text">
+          {{dateString}}
+        </span>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+          Settings
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+          <div *ngIf="sessionService.isAdmin()">
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/admin/changePassword']">Change Password</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/admin/logout']">Logout</a>
+          </div>
+          <div *ngIf="sessionService.isUser()">
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/user/changePassword']">Change Password</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/user/logout']">Logout</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="app-body">
+  <div class="sidebar">
+    <nav class="sidebar-nav border-main">
+      <ul class="nav">
+        <li class="nav-item">
+          <div *ngIf="sessionService.isAdmin()">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/dashboard']"><i class="icon-speedometer"></i> Dashboard</a>
+          </div>
+          <div *ngIf="sessionService.isUser()">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/user/dashboard']"><i class="icon-speedometer"></i> Dashboard</a>
+          </div>
+        </li>
+        <li class="divider"></li>
+        <li class="nav-title">
+          Management
+        </li>
+        <div *ngIf="sessionService.isAdmin()">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/company']"><i class="icon-people"></i>Companies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/notification']"><i class="icon-envelope"></i>Notifications</a>
+          </li>
+        </div>
+        <div *ngIf="sessionService.isUser()">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/user/onelink']"><i class="icon-people"></i>One Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/user/twolink']"><i class="fa fa-calendar" aria-hidden="true"></i>Two Link</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main content -->
+  <main class="main">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- /.conainer-fluid -->
+  </main>
+</div>

@@ -1,0 +1,20 @@
+$theme-colors: (
+  "primary": rgb(24, 77, 147),
+);
+
+$colors: (
+  "gray-light": #818a91,
+  "gray-lighter": #d1d4d7,
+  "gray-lightest": #f8f9fa
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true;
+$enable-transitions: true;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: #e4e5e6;
